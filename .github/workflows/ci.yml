@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - name: Lint
+        run: ruff check src tests examples
+      - name: Test
+        run: pytest -q
+      - name: Demo runs offline
+        run: mcp-task-reliability demo
+      - name: Examples run offline
+        run: |
+          python examples/crash_recovery_demo.py
+          python examples/poll_storm_demo.py
