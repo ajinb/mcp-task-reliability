@@ -17,7 +17,6 @@ from mcp_task_reliability.sim import (
 )
 from mcp_task_reliability.types import FailureClass
 
-
 # ---- E1 --------------------------------------------------------------------------------
 
 def test_e1_memory_store_loses_every_handle():
