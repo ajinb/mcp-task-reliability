@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "mcp-task-reliability"
+message: "If you use this software, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: Baby
+    given-names: Ajin
+    orcid: "https://orcid.org/0009-0007-6190-9516"
+repository-code: "https://github.com/ajinb/mcp-task-reliability"
+url: "https://cloudandsre.com"
+abstract: "The reliability layer the MCP Tasks extension doesn't specify \u2014 durable task store, retry classes, expiry and orphan reaping, and adaptive poll backoff for stateless MCP. Zero dependencies, deterministic offline demos."
+license: Apache-2.0
+version: "0.1.0"
+date-released: "2026-11-03"
+keywords:
+  - model-context-protocol
+  - durable-tasks
+  - retries
+  - reliability
+  - ai-agents
