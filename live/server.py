@@ -23,17 +23,17 @@ import signal
 import sys
 import threading
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from mcp_task_reliability.manager import TaskManager  # noqa: E402
-from mcp_task_reliability.policy import RetentionPolicy  # noqa: E402
-from mcp_task_reliability.store import InMemoryTaskStore, SqliteTaskStore  # noqa: E402
-from mcp_task_reliability.types import TaskNotFound, TaskRecord, TaskState  # noqa: E402
+from mcp_task_reliability.manager import TaskManager
+from mcp_task_reliability.policy import RetentionPolicy
+from mcp_task_reliability.store import InMemoryTaskStore, SqliteTaskStore
+from mcp_task_reliability.types import TaskNotFound, TaskRecord, TaskState
 
 TASKS_EXT = "io.modelcontextprotocol/tasks"
 CLIENT_CAPS = "io.modelcontextprotocol/clientCapabilities"
@@ -43,7 +43,7 @@ MISSING_CLIENT_CAPABILITY = -32021
 
 
 def iso(ts: float) -> str:
-    return datetime.fromtimestamp(ts, tz=timezone.utc).isoformat(timespec="milliseconds")
+    return datetime.fromtimestamp(ts, tz=UTC).isoformat(timespec="milliseconds")
 
 
 class LiveServer:
@@ -234,7 +234,7 @@ def make_handler(server: LiveServer) -> type[BaseHTTPRequestHandler]:
             self.end_headers()
             self.wfile.write(data)
 
-        def do_GET(self) -> None:  # noqa: N802
+        def do_GET(self) -> None:
             if self.path == "/stats":
                 self._send(200, server.stats())
             elif self.path == "/healthz":
@@ -242,7 +242,7 @@ def make_handler(server: LiveServer) -> type[BaseHTTPRequestHandler]:
             else:
                 self._send(404, {"error": "not found"})
 
-        def do_POST(self) -> None:  # noqa: N802
+        def do_POST(self) -> None:
             length = int(self.headers.get("Content-Length", "0"))
             req = json.loads(self.rfile.read(length) or b"{}")
             rid = req.get("id")
@@ -251,7 +251,7 @@ def make_handler(server: LiveServer) -> type[BaseHTTPRequestHandler]:
                 self._send(200, {"jsonrpc": "2.0", "id": rid, "result": result})
             except RpcError as e:
                 self._send(200, {"jsonrpc": "2.0", "id": rid, "error": {"code": e.code, "message": e.message}})
-            except Exception as e:  # surfaced, not swallowed
+            except Exception as e:  # noqa: BLE001 -- any handler fault becomes JSON-RPC -32603, never a dropped reply
                 self._send(200, {"jsonrpc": "2.0", "id": rid, "error": {"code": -32603, "message": repr(e)}})
 
     return Handler

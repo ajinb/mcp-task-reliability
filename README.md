@@ -180,7 +180,7 @@ same pass that failed it.
 ## Design notes
 
 - **Nothing calls `time.time()` or `time.sleep()`.** Every timing decision takes an injectable
-  clock, which is why 117 tests and both demos run in well under a second and produce identical
+  clock, which is why the whole test suite and both demos run in well under a second and produce identical
   output everywhere. A test that sleeps will be rejected.
 - **Stores are interchangeable.** `InMemoryTaskStore` and `SqliteTaskStore` pass the same
   contract suite (`tests/test_store.py::TestStoreContract`), down to returning copies rather

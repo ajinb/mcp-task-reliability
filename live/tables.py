@@ -66,7 +66,8 @@ def e5d(d: dict) -> list[str]:
 
 
 if __name__ == "__main__":
-    data = json.load(open(sys.argv[1]))
+    with open(sys.argv[1]) as f:
+        data = json.load(f)
     for block in (e5a(data), e5b(data), e5c(data), e5d(data)):
         print("\n".join(block))
         print()
