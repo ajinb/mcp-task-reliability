@@ -206,6 +206,23 @@ mcp-task-reliability demo              # the table above
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). The core stays dependency-free and clock-injected.
 
+## Paper
+
+This repository is the companion code for the preprint **[Stateless Protocol, Stateful Problem: Durability, Retry, and Retention Policy for MCP Tasks](https://cloudandsre.com/research/stateless-protocol-stateful-problem/)**
+(Ajin Baby, September 2026, not peer reviewed). Full text: [PDF](https://ajinb.github.io/research/stateless-protocol-stateful-problem/stateless-protocol-stateful-problem.pdf) ·
+[paper page](https://ajinb.github.io/research/stateless-protocol-stateful-problem/) · [all papers](https://ajinb.github.io/research/).
+
+```bibtex
+@techreport{baby2026stateless,
+  title       = {Stateless Protocol, Stateful Problem: Durability, Retry, and Retention Policy for MCP Tasks},
+  author      = {Ajin Baby},
+  year        = {2026},
+  institution = {cloudandsre.com},
+  type        = {Preprint},
+  url         = {https://cloudandsre.com/research/stateless-protocol-stateful-problem/}
+}
+```
+
 ## License
 
 Apache 2.0. More at [cloudandsre.com](https://cloudandsre.com).

@@ -18,3 +18,16 @@ keywords:
   - retries
   - reliability
   - ai-agents
+preferred-citation:
+  type: report
+  title: "Stateless Protocol, Stateful Problem: Durability, Retry, and Retention Policy for MCP Tasks"
+  authors:
+    - family-names: Baby
+      given-names: Ajin
+      orcid: "https://orcid.org/0009-0007-6190-9516"
+  institution:
+    name: cloudandsre.com
+  year: 2026
+  month: 9
+  url: "https://cloudandsre.com/research/stateless-protocol-stateful-problem/"
+  notes: "Preprint, not peer reviewed. Full text: https://ajinb.github.io/research/stateless-protocol-stateful-problem/stateless-protocol-stateful-problem.pdf"
