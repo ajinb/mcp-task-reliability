@@ -189,16 +189,38 @@ same pass that failed it.
 - **Terminal is a one-way door**, enforced by the transition table in `types.py` rather than by
   convention.
 
-## Status
+## Live study (E5): the official requester against a real process
 
-**v0.1.** The policy layer is complete and tested; the offline scenarios reproduce every number
-in this README. Not yet wired to a live MCP server — a `mcp` SDK adapter for the real
-`tasks/*` wire calls is the v0.2 milestone. The spec is three weeks old at the time of writing;
-re-check it before depending on this in production.
+`live/` puts the policy layer behind a real socket and points the **official**
+[`@modelcontextprotocol/ext-tasks`](https://github.com/modelcontextprotocol/ext-tasks)
+requester (pinned 0.2.3) at it, then kills the server process.
+
+- `live/server.py` — JSON-RPC over HTTP for the 2026-07-28 Tasks subset a requester uses
+  (`tools/list`, `tools/call` → `CreateTaskResult`, `tasks/get`, `tasks/cancel`), on this
+  library's `TaskManager` with either store. A test server, not an MCP SDK server: as of
+  November 2026 the TypeScript, Python and Go SDKs ship no server-side task runtime for the
+  extension, and the C# SDK's (`ModelContextProtocol.Extensions.Tasks`) ships an in-memory
+  reference store.
+- `live/client/e5.mjs` — drives the requester through `withTasks(port)`, the package's own
+  seam for non-SDK hosts. The port only frames JSON-RPC; every polling, retry, settlement and
+  resume decision is the package's.
+- `live/results/e5.json` — the recorded run the paper reports; `tests/test_live_e5.py` pins it.
 
 ```bash
-pytest -q                              # 117 tests
-ruff check src tests examples
+cd live/client && npm ci
+PYTHON=python3.11 node e5.mjs > ../results/e5.json   # ~5 minutes of wall clock
+python3.11 ../tables.py ../results/e5.json           # the paper's Tables 8–11
+```
+
+## Status
+
+**v0.2.** The policy layer is complete and tested; the offline scenarios reproduce every number
+in this README, and the live harness (E5) exercises it against the official requester. The spec
+moves; re-check it before depending on this in production.
+
+```bash
+pytest -q                              # library + pinned simulation and live results
+ruff check src tests examples live
 mcp-task-reliability demo              # the table above
 ```
 

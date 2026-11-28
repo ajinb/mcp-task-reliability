@@ -1,0 +1,10 @@
+{
+  "name": "mcp-task-reliability-live-client",
+  "private": true,
+  "type": "module",
+  "description": "E5 live harness: drives the official @modelcontextprotocol/ext-tasks requester over real HTTP.",
+  "dependencies": {
+    "@modelcontextprotocol/client": "^2.4.0",
+    "@modelcontextprotocol/ext-tasks": "0.2.3"
+  }
+}

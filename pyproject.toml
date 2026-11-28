@@ -1,6 +1,6 @@
 [project]
 name = "mcp-task-reliability"
-version = "0.1.0"
+version = "0.2.0"
 description = "The reliability layer the MCP Tasks extension does not specify — durable task store, retry classes, expiry and orphan reaping, and adaptive poll backoff for stateless MCP."
 readme = "README.md"
 license = { text = "Apache-2.0" }
