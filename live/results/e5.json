@@ -1,0 +1,524 @@
+{
+  "package": "@modelcontextprotocol/ext-tasks@0.2.3",
+  "node": "v22.15.1",
+  "startedAt": "2026-11-28T09:51:31.574Z",
+  "e5a": [
+    {
+      "store": "memory",
+      "downtimeMs": 100,
+      "recovery": {
+        "resumable": 0,
+        "timed_out": 0,
+        "poisoned": 0
+      },
+      "shortSettledBeforeCrash": 12,
+      "inFlightSurvivedWithoutResume": 0,
+      "inFlightSettledAs": {
+        "failed": 8
+      },
+      "inFlightMessages": [
+        "transport: ECONNREFUSED"
+      ],
+      "inFlightWithTerminalSnapshot": 0,
+      "inFlightCauses": [
+        "DispatchError"
+      ],
+      "inFlightRejectedErrors": [],
+      "resolvedAfterRestart": 0,
+      "lostAfterRestart": 20,
+      "resumedCompletedInFlight": 0,
+      "reexecuted": 0,
+      "resumeErrors": [
+        "JsonRpcResponseError: Failed to retrieve task: Task not found"
+      ],
+      "transportErrors": 16
+    },
+    {
+      "store": "memory",
+      "downtimeMs": 500,
+      "recovery": {
+        "resumable": 0,
+        "timed_out": 0,
+        "poisoned": 0
+      },
+      "shortSettledBeforeCrash": 12,
+      "inFlightSurvivedWithoutResume": 0,
+      "inFlightSettledAs": {
+        "failed": 8
+      },
+      "inFlightMessages": [
+        "transport: ECONNREFUSED"
+      ],
+      "inFlightWithTerminalSnapshot": 0,
+      "inFlightCauses": [
+        "DispatchError"
+      ],
+      "inFlightRejectedErrors": [],
+      "resolvedAfterRestart": 0,
+      "lostAfterRestart": 20,
+      "resumedCompletedInFlight": 0,
+      "reexecuted": 0,
+      "resumeErrors": [
+        "JsonRpcResponseError: Failed to retrieve task: Task not found"
+      ],
+      "transportErrors": 16
+    },
+    {
+      "store": "memory",
+      "downtimeMs": 2000,
+      "recovery": {
+        "resumable": 0,
+        "timed_out": 0,
+        "poisoned": 0
+      },
+      "shortSettledBeforeCrash": 12,
+      "inFlightSurvivedWithoutResume": 0,
+      "inFlightSettledAs": {
+        "failed": 8
+      },
+      "inFlightMessages": [
+        "transport: ECONNREFUSED"
+      ],
+      "inFlightWithTerminalSnapshot": 0,
+      "inFlightCauses": [
+        "DispatchError"
+      ],
+      "inFlightRejectedErrors": [],
+      "resolvedAfterRestart": 0,
+      "lostAfterRestart": 20,
+      "resumedCompletedInFlight": 0,
+      "reexecuted": 0,
+      "resumeErrors": [
+        "JsonRpcResponseError: Failed to retrieve task: Task not found"
+      ],
+      "transportErrors": 16
+    },
+    {
+      "store": "sqlite",
+      "downtimeMs": 100,
+      "recovery": {
+        "resumable": 8,
+        "timed_out": 0,
+        "poisoned": 0
+      },
+      "shortSettledBeforeCrash": 12,
+      "inFlightSurvivedWithoutResume": 0,
+      "inFlightSettledAs": {
+        "failed": 8
+      },
+      "inFlightMessages": [
+        "transport: ECONNREFUSED"
+      ],
+      "inFlightWithTerminalSnapshot": 0,
+      "inFlightCauses": [
+        "DispatchError"
+      ],
+      "inFlightRejectedErrors": [],
+      "resolvedAfterRestart": 20,
+      "lostAfterRestart": 0,
+      "resumedCompletedInFlight": 8,
+      "reexecuted": 8,
+      "resumeErrors": [],
+      "transportErrors": 16
+    },
+    {
+      "store": "sqlite",
+      "downtimeMs": 500,
+      "recovery": {
+        "resumable": 8,
+        "timed_out": 0,
+        "poisoned": 0
+      },
+      "shortSettledBeforeCrash": 12,
+      "inFlightSurvivedWithoutResume": 0,
+      "inFlightSettledAs": {
+        "failed": 8
+      },
+      "inFlightMessages": [
+        "transport: ECONNREFUSED"
+      ],
+      "inFlightWithTerminalSnapshot": 0,
+      "inFlightCauses": [
+        "DispatchError"
+      ],
+      "inFlightRejectedErrors": [],
+      "resolvedAfterRestart": 20,
+      "lostAfterRestart": 0,
+      "resumedCompletedInFlight": 8,
+      "reexecuted": 8,
+      "resumeErrors": [],
+      "transportErrors": 16
+    },
+    {
+      "store": "sqlite",
+      "downtimeMs": 2000,
+      "recovery": {
+        "resumable": 8,
+        "timed_out": 0,
+        "poisoned": 0
+      },
+      "shortSettledBeforeCrash": 12,
+      "inFlightSurvivedWithoutResume": 0,
+      "inFlightSettledAs": {
+        "failed": 8
+      },
+      "inFlightMessages": [
+        "transport: ECONNREFUSED"
+      ],
+      "inFlightWithTerminalSnapshot": 0,
+      "inFlightCauses": [
+        "DispatchError"
+      ],
+      "inFlightRejectedErrors": [],
+      "resolvedAfterRestart": 20,
+      "lostAfterRestart": 0,
+      "resumedCompletedInFlight": 8,
+      "reexecuted": 8,
+      "resumeErrors": [],
+      "transportErrors": 16
+    }
+  ],
+  "e5b": [
+    {
+      "hint": "none",
+      "cells": [
+        {
+          "durationMs": 1000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 2,
+          "pollsMin": 2,
+          "pollsMax": 2,
+          "staleMsP50": 1025,
+          "staleMsMax": 1036
+        },
+        {
+          "durationMs": 5000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 5,
+          "pollsMin": 5,
+          "pollsMax": 5,
+          "staleMsP50": 58,
+          "staleMsMax": 61
+        },
+        {
+          "durationMs": 30000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 30,
+          "pollsMin": 30,
+          "pollsMax": 30,
+          "staleMsP50": 203,
+          "staleMsMax": 204
+        }
+      ],
+      "wallMs": 30267
+    },
+    {
+      "hint": "0",
+      "cells": [
+        {
+          "durationMs": 1000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 76.8,
+          "pollsMin": 76,
+          "pollsMax": 78,
+          "staleMsP50": 16,
+          "staleMsMax": 17
+        },
+        {
+          "durationMs": 5000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 374.4,
+          "pollsMin": 373,
+          "pollsMax": 377,
+          "staleMsP50": 46,
+          "staleMsMax": 47
+        },
+        {
+          "durationMs": 30000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 2204.9,
+          "pollsMin": 2203,
+          "pollsMax": 2207,
+          "staleMsP50": 30,
+          "staleMsMax": 31
+        }
+      ],
+      "wallMs": 30136
+    },
+    {
+      "hint": "250",
+      "cells": [
+        {
+          "durationMs": 1000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 4,
+          "pollsMin": 4,
+          "pollsMax": 4,
+          "staleMsP50": 30,
+          "staleMsMax": 35
+        },
+        {
+          "durationMs": 5000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 20,
+          "pollsMin": 20,
+          "pollsMax": 20,
+          "staleMsP50": 131,
+          "staleMsMax": 132
+        },
+        {
+          "durationMs": 30000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 118,
+          "pollsMin": 118,
+          "pollsMax": 118,
+          "staleMsP50": 163,
+          "staleMsMax": 165
+        }
+      ],
+      "wallMs": 30245
+    },
+    {
+      "hint": "1000",
+      "cells": [
+        {
+          "durationMs": 1000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 2,
+          "pollsMin": 2,
+          "pollsMax": 2,
+          "staleMsP50": 1027,
+          "staleMsMax": 1028
+        },
+        {
+          "durationMs": 5000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 5,
+          "pollsMin": 5,
+          "pollsMax": 5,
+          "staleMsP50": 46,
+          "staleMsMax": 47
+        },
+        {
+          "durationMs": 30000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 30,
+          "pollsMin": 30,
+          "pollsMax": 30,
+          "staleMsP50": 185,
+          "staleMsMax": 186
+        }
+      ],
+      "wallMs": 30255
+    },
+    {
+      "hint": "5000",
+      "cells": [
+        {
+          "durationMs": 1000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 1,
+          "pollsMin": 1,
+          "pollsMax": 1,
+          "staleMsP50": 4023,
+          "staleMsMax": 4025
+        },
+        {
+          "durationMs": 5000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 1.7,
+          "pollsMin": 1,
+          "pollsMax": 2,
+          "staleMsP50": 5032,
+          "staleMsMax": 5034
+        },
+        {
+          "durationMs": 30000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 6,
+          "pollsMin": 6,
+          "pollsMax": 6,
+          "staleMsP50": 54,
+          "staleMsMax": 55
+        }
+      ],
+      "wallMs": 30127
+    },
+    {
+      "hint": "auto",
+      "cells": [
+        {
+          "durationMs": 1000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 4,
+          "pollsMin": 4,
+          "pollsMax": 4,
+          "staleMsP50": 35,
+          "staleMsMax": 38
+        },
+        {
+          "durationMs": 5000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 20,
+          "pollsMin": 20,
+          "pollsMax": 20,
+          "staleMsP50": 123,
+          "staleMsMax": 124
+        },
+        {
+          "durationMs": 30000,
+          "reps": 10,
+          "completed": 10,
+          "pollsMean": 20,
+          "pollsMin": 20,
+          "pollsMax": 20,
+          "staleMsP50": 115,
+          "staleMsMax": 115
+        }
+      ],
+      "wallMs": 30169
+    }
+  ],
+  "e5c": {
+    "handoff": [
+      {
+        "orphanAfterS": 1,
+        "gapMs": 500,
+        "durationMs": 8000,
+        "settled": "completed",
+        "terminalSnapshot": true
+      },
+      {
+        "orphanAfterS": 1,
+        "gapMs": 2000,
+        "durationMs": 8000,
+        "settled": "cancelled",
+        "message": "orphaned: no poll for 1s",
+        "terminalSnapshot": true
+      },
+      {
+        "orphanAfterS": 1,
+        "gapMs": 4000,
+        "durationMs": 8000,
+        "settled": "cancelled",
+        "message": "orphaned: no poll for 1s",
+        "terminalSnapshot": true
+      },
+      {
+        "orphanAfterS": 3,
+        "gapMs": 500,
+        "durationMs": 8000,
+        "settled": "completed",
+        "terminalSnapshot": true
+      },
+      {
+        "orphanAfterS": 3,
+        "gapMs": 2000,
+        "durationMs": 8000,
+        "settled": "completed",
+        "terminalSnapshot": true
+      },
+      {
+        "orphanAfterS": 3,
+        "gapMs": 4000,
+        "durationMs": 8000,
+        "settled": "cancelled",
+        "message": "orphaned: no poll for 3s",
+        "terminalSnapshot": true
+      }
+    ],
+    "hint": [
+      {
+        "orphanAfterS": 1,
+        "hintMs": 500,
+        "durationMs": 8000,
+        "polls": 16,
+        "settled": "completed",
+        "terminalSnapshot": true
+      },
+      {
+        "orphanAfterS": 1,
+        "hintMs": 2000,
+        "durationMs": 8000,
+        "polls": 1,
+        "settled": "cancelled",
+        "message": "orphaned: no poll for 1s",
+        "terminalSnapshot": true
+      },
+      {
+        "orphanAfterS": 1,
+        "hintMs": 5000,
+        "durationMs": 8000,
+        "polls": 1,
+        "settled": "cancelled",
+        "message": "orphaned: no poll for 1s",
+        "terminalSnapshot": true
+      },
+      {
+        "orphanAfterS": 3,
+        "hintMs": 500,
+        "durationMs": 8000,
+        "polls": 16,
+        "settled": "completed",
+        "terminalSnapshot": true
+      },
+      {
+        "orphanAfterS": 3,
+        "hintMs": 2000,
+        "durationMs": 8000,
+        "polls": 4,
+        "settled": "completed",
+        "terminalSnapshot": true
+      },
+      {
+        "orphanAfterS": 3,
+        "hintMs": 5000,
+        "durationMs": 8000,
+        "polls": 1,
+        "settled": "cancelled",
+        "message": "orphaned: no poll for 3s",
+        "terminalSnapshot": true
+      }
+    ]
+  },
+  "e5d": [
+    {
+      "ttlMs": 60000,
+      "durationMs": 2000,
+      "settled": "completed",
+      "terminalSnapshot": true
+    },
+    {
+      "ttlMs": 3000,
+      "durationMs": 2000,
+      "settled": "completed",
+      "terminalSnapshot": true
+    },
+    {
+      "ttlMs": 3000,
+      "durationMs": 6000,
+      "settled": "failed",
+      "message": "ttl elapsed while working",
+      "terminalSnapshot": true,
+      "cause": "JsonRpcResponseError"
+    }
+  ],
+  "finishedAt": "2026-11-28T09:56:14.772Z"
+}
